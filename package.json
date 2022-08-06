@@ -1,11 +1,11 @@
 {
-  "name": "bankist-server",
+  "name": "deezer-server",
   "version": "1.0.0",
-  "description": "Bankist - Backend",
+  "description": "deezer - Backend",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "David Kiama",
   "license": "ISC",
