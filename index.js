@@ -9,10 +9,6 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 
-// connect to DB
-
-const PORT = 5000;
-
 app.get("/", (req, res) => {
   res.send("APP IS RUNNING");
 });
@@ -87,4 +83,5 @@ app.post("/search", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`));
+const PORT = 5000;
+app.listen(PORT, () => console.log(`Server Running on Port:${PORT}`));
