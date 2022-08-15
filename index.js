@@ -60,7 +60,7 @@ app.get("/artist/:id", async (req, res) => {
 
     const [albums, top] = artistData;
 
-    return res.status(200).json({ albums, top, info, id });
+    return res.status(200).json({ albums, top, info, ID: id });
   } catch (error) {
     console.log(error);
     return res.status(404).json({ message: error });
