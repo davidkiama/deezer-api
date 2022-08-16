@@ -20,7 +20,14 @@ app.get("/artists", async (req, res) => {
     const generatedIds = new Set();
     while (generatedIds.size !== 6) {
       //I used 40 below to get random randoms from 1-40 . This can be changed
-      generatedIds.add(Math.floor(Math.random() * 40) + 1);
+
+      // some id don't have data
+      const genID = Math.floor(Math.random() * 40) + 1;
+      if (genID === 12 || genID === 23) {
+        continue;
+      } else {
+        generatedIds.add(genID);
+      }
     }
 
     const arrayOfIdS = Array.from(generatedIds);
